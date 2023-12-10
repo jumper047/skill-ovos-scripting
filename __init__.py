@@ -127,7 +127,7 @@ class ScriptingSkill(MycroftSkill):
                                    INTENTDIR_PREFIX,
                                    name + ".intent")
         # register_padatious_intent
-        self.intent_service.register_padatious_intent(intent_name, intent_file)
+        self.intent_service.register_padatious_intent(intent_name, intent_file, lang=self.lang)
         self.add_event(intent_name, self.create_handler(actions, entities), 'mycroft.skill.handler')
         LOG.info("New alias registered: {}".format(name))
 
